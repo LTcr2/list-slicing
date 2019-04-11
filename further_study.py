@@ -245,8 +245,9 @@ def custom_equality(some_list, another_list):
         False
 
     """
-
-    return None
+    if some_list == another_list:
+        return True
+    return False
 
 
 ##############################################################################
