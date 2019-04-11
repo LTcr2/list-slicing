@@ -61,16 +61,9 @@ def custom_append(input_list, value):
         True
 
     """
-    index_count = 0 
-    for i in input_list:
-        index_count += 1
-
-    new_notes = []
-    index = 0
-    for note in range(index_count):
-        #if index != index_count:
-        new_notes[index] = note
-        index += 1
+    
+    input_list += [value]
+    
 
 def custom_extend(input_list, second_list):
     """Append every item in second_list to input_list.
@@ -88,7 +81,7 @@ def custom_extend(input_list, second_list):
 
     """
 
-    pass
+    input_list += second_list
 
 
 def custom_insert(input_list, index, value):
@@ -105,8 +98,9 @@ def custom_insert(input_list, index, value):
         True
 
     """
-
-    pass
+    rest_of_list = input_list[index:]
+    input_list[index] = value
+    input_list[index] += rest_of_list
 
 
 def custom_remove(input_list, value):
