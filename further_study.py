@@ -98,9 +98,7 @@ def custom_insert(input_list, index, value):
         True
 
     """
-    rest_of_list = input_list[index:]
-    input_list[index] = value
-    input_list[index] += rest_of_list
+    input_list[1:1] = [value]
 
 
 def custom_remove(input_list, value):
@@ -119,7 +117,7 @@ def custom_remove(input_list, value):
 
     """
 
-    pass
+    input_list[:] = input_list[1:]
 
 
 def custom_pop(input_list):
@@ -138,7 +136,11 @@ def custom_pop(input_list):
 
     """
 
-    return None
+    
+    last_item = input_list[-1]
+    input_list[:] = input_list[:-1]
+    
+    return last_item
 
 
 def custom_index(input_list, value):
@@ -153,8 +155,14 @@ def custom_index(input_list, value):
         1
 
     """
+    index = 0 
 
-    return 0
+    while input_list[index] != value:
+        index += 1
+
+    return index
+
+
 
 
 def custom_count(input_list, value):
@@ -169,8 +177,13 @@ def custom_count(input_list, value):
         2
 
     """
+    note_count = 0
 
-    return 0
+    for note in input_list: 
+        if note == value:
+            note_count += 1
+
+    return note_count
 
 
 def custom_reverse(input_list):
@@ -189,7 +202,7 @@ def custom_reverse(input_list):
 
     """
 
-    pass
+    input_list[:] = input_list[::-1]
 
 
 def custom_contains(input_list, value):
@@ -208,8 +221,13 @@ def custom_contains(input_list, value):
         True
 
     """
+    for item in input_list:
+        if item == value:
+            return True
+    return False
 
-    return None
+
+    
 
 
 def custom_equality(some_list, another_list):
