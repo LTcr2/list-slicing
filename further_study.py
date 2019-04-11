@@ -30,8 +30,11 @@ def custom_len(input_list):
         8
 
     """
+    index_count = 0 
+    for i in input_list:
+        index_count += 1
 
-    return 0
+    return index_count
 
 
 # For the next four exercises, you'll need to be clever and think about ways
@@ -58,9 +61,16 @@ def custom_append(input_list, value):
         True
 
     """
+    index_count = 0 
+    for i in input_list:
+        index_count += 1
 
-    pass
-
+    new_notes = []
+    index = 0
+    for note in range(index_count):
+        #if index != index_count:
+        new_notes[index] = note
+        index += 1
 
 def custom_extend(input_list, second_list):
     """Append every item in second_list to input_list.
