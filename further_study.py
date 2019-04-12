@@ -245,9 +245,36 @@ def custom_equality(some_list, another_list):
         False
 
     """
-    if some_list == another_list:
-        return True
-    return False
+    #loop this
+        #while True:
+            #compare first item  of some_list to first item of  another_list
+        #return True
+    #return False
+
+
+#failed attempt #1 :)
+    # i = 0
+    # while i < len(another_list):
+    #     while some_list[i] == another_list[i]:
+    #         return True
+    #     return False
+
+#failed attempt #298347 :)
+    # end = len(some_list)
+    # start = 0
+    # while start < end:
+    #     i = 0
+    #     result = True
+    #     if result == True:
+    #         if some_list[i] == another_list[i]:
+    #             result = True
+    #         i += 1
+    #         break
+    #     result = False
+    # return result
+        
+    
+
 
 
 ##############################################################################
